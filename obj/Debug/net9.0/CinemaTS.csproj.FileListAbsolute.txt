@@ -1,0 +1,17 @@
+d:\CZU\Cinema ticket system\CinemaTS\bin\Debug\net9.0\CinemaTS.exe
+D:\CZU\Cinema ticket system\CinemaTS\bin\Debug\net9.0\CinemaTS.deps.json
+D:\CZU\Cinema ticket system\CinemaTS\bin\Debug\net9.0\CinemaTS.runtimeconfig.json
+d:\CZU\Cinema ticket system\CinemaTS\bin\Debug\net9.0\CinemaTS.dll
+d:\CZU\Cinema ticket system\CinemaTS\bin\Debug\net9.0\CinemaTS.pdb
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.GeneratedMSBuildEditorConfig.editorconfig
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.AssemblyInfoInputs.cache
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.AssemblyInfo.cs
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.csproj.CoreCompileInputs.cache
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.dll
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\refint\CinemaTS.dll
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.pdb
+D:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.genruntimeconfig.cache
+D:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\ref\CinemaTS.dll
+d:\CZU\Cinema ticket system\CinemaTS\bin\Debug\net9.0\Newtonsoft.Json.dll
+d:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.csproj.AssemblyReference.cache
+D:\CZU\Cinema ticket system\CinemaTS\obj\Debug\net9.0\CinemaTS.csproj.Up2Date

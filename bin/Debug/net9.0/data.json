@@ -1,0 +1,11 @@
+{
+  "abc": {
+    "Width": 20,
+    "Height": 20,
+    "ReservedSeats": [
+      "a12",
+      "v4",
+      "e6"
+    ]
+  }
+}
