@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CZU\\Cinema ticket system\\CinemaTS\\CinemaTS.csproj": {}
+    "/Users/justapoint/Documents/GitHub/CZUPROG/CinemaTS.csproj": {}
   },
   "projects": {
-    "D:\\CZU\\Cinema ticket system\\CinemaTS\\CinemaTS.csproj": {
+    "/Users/justapoint/Documents/GitHub/CZUPROG/CinemaTS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CZU\\Cinema ticket system\\CinemaTS\\CinemaTS.csproj",
+        "projectUniqueName": "/Users/justapoint/Documents/GitHub/CZUPROG/CinemaTS.csproj",
         "projectName": "CinemaTS",
-        "projectPath": "D:\\CZU\\Cinema ticket system\\CinemaTS\\CinemaTS.csproj",
-        "packagesPath": "C:\\Users\\userf\\.nuget\\packages\\",
-        "outputPath": "D:\\CZU\\Cinema ticket system\\CinemaTS\\obj\\",
+        "projectPath": "/Users/justapoint/Documents/GitHub/CZUPROG/CinemaTS.csproj",
+        "packagesPath": "/Users/justapoint/.nuget/packages/",
+        "outputPath": "/Users/justapoint/Documents/GitHub/CZUPROG/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\userf\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/justapoint/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

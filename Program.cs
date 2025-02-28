@@ -40,6 +40,7 @@ class Program
     {
         Console.Clear();
         Console.WriteLine("Welcome to the Cinema Reservation System");
+        Console.WriteLine();
         if (cinemaHalls.Count == 0)
         {
             Console.WriteLine("1. Create new cinema hall");
@@ -119,6 +120,12 @@ class Program
                 Console.ForegroundColor = (seat == 'X') ? ConsoleColor.Red : ConsoleColor.Green;
                 Console.Write($"{seat} ");
                 Console.ResetColor();
+
+                if (j == hall.Width / 2)
+                {
+                    Console.Write("\t");
+                }
+
             }
             Console.WriteLine();
         }
@@ -126,6 +133,11 @@ class Program
         for (int i = 1; i <= hall.Width; i++)
         {
             Console.Write($"{(char)(i + 96)} ");
+
+            if (i == hall.Width / 2)
+            {
+                Console.Write("\t");
+            }
         }
         Console.WriteLine();
     }
