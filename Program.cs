@@ -107,12 +107,11 @@ class Program
     static void DrawHall(CinemaHall hall)
     {
         Console.Clear();
-        // Draw the seats
+
         for (int i = 1; i <= hall.Height; i++)
         {
-            // Draw row number
             Console.Write(i.ToString().PadRight(3));
-            // Draw seats without central aisle (no empty space)
+
             for (int j = 1; j <= hall.Width; j++)
             {
                 string seatId = $"{(char)(j + 96)}{i}";
@@ -128,9 +127,6 @@ class Program
         {
             Console.Write($"{(char)(i + 96)} ");
         }
-        Console.WriteLine();
-
-        // Just one space here
         Console.WriteLine();
     }
 
@@ -202,6 +198,3 @@ class Program
         MainMenu();
     }
 }
-
-
-
