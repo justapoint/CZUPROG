@@ -99,10 +99,8 @@ class Program
         {
             Console.Write("Are you sure you want to exit without saving? (yes/no): ");
             string confirm = Console.ReadLine();
-            if (confirm.ToLower() == "yes") Environment.Exit(0);
+            if (confirm.ToLower() == "yes") MainMenu();
         }
-
-        MainMenu();
     }
 
     static void DrawHall(CinemaHall hall)
@@ -159,6 +157,7 @@ class Program
         CinemaHall selectedHall = cinemaHalls[hallName];
         
         DrawHall(selectedHall);
+        Console.WriteLine();
         Console.WriteLine("1. Reserve/Cancel reservation");
         Console.WriteLine("2. Delete hall");
         Console.WriteLine("3. Back to main menu");

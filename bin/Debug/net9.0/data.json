@@ -7,5 +7,12 @@
       "v4",
       "e6"
     ]
+  },
+  "test": {
+    "Width": 10,
+    "Height": 10,
+    "ReservedSeats": [
+      "c8"
+    ]
   }
 }
