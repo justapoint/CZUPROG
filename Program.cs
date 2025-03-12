@@ -1,7 +1,7 @@
 ﻿using System;            // Základní funkce jazyka C# (vstup/výstup, konzole, výjimky atd.).
 using System.Collections.Generic; // Práce se seznamy, množinami, slovníky a dalšími kolekcemi.
 using System.IO;         // Práce se soubory a streamy.
-using System.Text.RegularExpressions;
+using System.Text.RegularExpressions; // Používá se pro práci s regulárními výrazy.
 using Newtonsoft.Json;   // Serializace a deserializace JSON dat.
 
 
@@ -61,6 +61,8 @@ class Program
             Console.WriteLine("2. Create new cinema hall");
             Console.WriteLine("3. Exit");
 
+            Console.WriteLine();
+            Console.Write("Select an option: ");
             string choice = Console.ReadLine();
 
             if (choice == "1") InteractWithExistingHalls();
@@ -112,6 +114,8 @@ class Program
             Console.WriteLine("\n1. Save hall");
             Console.WriteLine("2. Exit");
 
+            Console.WriteLine();
+            Console.Write("Select an option: ");
             string choice = Console.ReadLine();
 
             if (choice == "1")
@@ -136,7 +140,6 @@ class Program
                 }
                 else
                 {
-                    Console.WriteLine("Returning to the main choice...");
                     continue;
                 }
             }
@@ -196,6 +199,7 @@ class Program
         {
             Console.Clear();
             Console.WriteLine("Select a cinema hall:");
+            Console.WriteLine();
 
             int index = 1;
 
@@ -208,6 +212,7 @@ class Program
                 index++;
             }
 
+            Console.WriteLine();
             Console.Write("Enter number between (1 and " + cinemaHalls.Count + "): ");
             
             string input = Console.ReadLine();
@@ -234,6 +239,8 @@ class Program
         Console.WriteLine("2. Delete hall");
         Console.WriteLine("3. Back to main menu");
 
+        Console.WriteLine();
+        Console.Write("Select an option: ");
         string option = Console.ReadLine();
 
         if (option == "1") ReserveOrCancel(selectedHall, hallName);
@@ -247,22 +254,39 @@ class Program
         {
             Console.Clear();
 
+            DrawHall(hall);
+
+            Console.WriteLine();
             Console.Write("Enter seat to reserve or cancel (e.g., a1): ");
             string seat = Console.ReadLine();
 
-            if (Regex.IsMatch(seat, "^[a-zA-Z]{1}[1-9]$|^[a-zA-Z]{1}[1-2][0-9]$|^[a-zA-Z]{1}30$"))
+            if (!Regex.IsMatch(seat, "^[a-zA-Z]{1}[1-9]$|^[a-zA-Z]{1}[1-2][0-9]$|^[a-zA-Z]{1}30$")) // Kontrola správného formátu místa.
             {
-                if (hall.ReservedSeats.Contains(seat))
-                {
-                    hall.ReservedSeats.Remove(seat);
-                }
-                else
-                {
-                    hall.ReservedSeats.Add(seat); // нужно добавить проверку на то что места которые код сохраняет есть в зале, сейчас даже если места нет он его сохранит хоть и не позволит сделать место ваыаваа
-                }
-                break;
+                continue;
             }
+
+            char seatLetter = char.ToUpper(seat[0]); // Pro zjednodušení převádíme všechna písmena na stejný registr.
+            int seatRow = int.Parse(seat.Substring(1));
+
+            if (seatLetter - 'A' >= hall.Width || seatRow > hall.Height) // Kontrola, zda místo existuje.
+            {
+                continue;
+            }
+
+            if (hall.ReservedSeats.Contains(seat))
+            {
+                hall.ReservedSeats.Remove(seat);
+                Console.WriteLine("Reservation canceled.");
+            }
+            else
+            {
+                hall.ReservedSeats.Add(seat);
+                Console.WriteLine("Seat reserved.");
+            }
+
+            break;
         }
+
 
         SaveData();
         DrawHall(hall);
@@ -273,6 +297,8 @@ class Program
         Console.WriteLine("2. Delete hall");
         Console.WriteLine("3. Back to main menu");
 
+        Console.WriteLine();
+        Console.Write("Select an option: ");
         string option = Console.ReadLine();
 
         if (option == "1") ReserveOrCancel(hall, hallName);
@@ -280,7 +306,7 @@ class Program
         else MainMenu();
     }
 
-    static void DeleteHall(string hallName) //добавить уточнение уверен ли пользоватлеь из функции CreateNewHall
+    static void DeleteHall(string hallName) // Smazání existujícího sálu.
     {
         Console.Clear();
         Console.Write($"Are you sure you want to delete the hall {hallName}? (yes/no): ");
@@ -291,9 +317,9 @@ class Program
         {
             cinemaHalls.Remove(hallName);
             SaveData();
-            Console.WriteLine("Hall deleted.");
         }
-
-        MainMenu();
+        else {
+            MainMenu();
+        }
     }
-}
+} // Všechny komentáře v kódu byly napsány ChatGPT.
