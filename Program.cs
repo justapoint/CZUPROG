@@ -57,7 +57,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("1. Interact with existing cinema halls");
+            Console.WriteLine("1. All cinema halls");
             Console.WriteLine("2. Create new cinema hall");
             Console.WriteLine("3. Exit");
 
@@ -147,6 +147,8 @@ class Program
             Console.Clear();
         }
 
+        LoadData();
+        MainMenu();
     }
 
     static void DrawHall(CinemaHall hall) // Vykreslení sálů.
@@ -317,6 +319,9 @@ class Program
         {
             cinemaHalls.Remove(hallName);
             SaveData();
+
+            LoadData();
+            MainMenu();
         }
         else {
             MainMenu();

@@ -13,11 +13,9 @@
       "t20"
     ]
   },
-  "test": {
-    "Width": 10,
-    "Height": 10,
-    "ReservedSeats": [
-      "c8"
-    ]
+  "213": {
+    "Width": 5,
+    "Height": 5,
+    "ReservedSeats": []
   }
 }

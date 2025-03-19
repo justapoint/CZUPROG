@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CinemaTS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1facc9437fcb875fb670c62a30db9fe54c30fd5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d86e4870d7b9859c0f491282230773d7b9ddb46")]
 [assembly: System.Reflection.AssemblyProductAttribute("CinemaTS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CinemaTS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
