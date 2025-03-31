@@ -74,12 +74,13 @@ class Program
     static void CreateNewHall() // Vytvoření nového sála a přidání do seznamu.
     {
         Console.Clear();
-        Console.WriteLine("Enter cinema hall size (Width Max 26, Height Max 30)");
 
         int width = 0, height = 0;
 
         while (true)
         {
+            Console.Clear();
+            Console.WriteLine("Enter cinema hall size (Width Max 26, Height Max 30)");
             Console.Write("Width (1-26): "); // Maximální počet míst je roven počtu písmen v latinské abecedě.
 
             string input = Console.ReadLine();
@@ -89,10 +90,13 @@ class Program
             }
 
             Console.WriteLine("Invalid input. Try again.");
+            Console.ReadLine();
         }
 
         while (true)
         {
+            Console.Clear();
+            Console.WriteLine("Enter cinema hall size (Width Max 26, Height Max 30)");
             Console.Write("Height (1-30): ");
 
             string input = Console.ReadLine();
@@ -102,6 +106,7 @@ class Program
             }
 
             Console.WriteLine("Invalid input. Try again.");
+            Console.ReadLine();
         }
 
 
@@ -264,6 +269,8 @@ class Program
 
             if (!Regex.IsMatch(seat, "^[a-zA-Z]{1}[1-9]$|^[a-zA-Z]{1}[1-2][0-9]$|^[a-zA-Z]{1}30$")) // Kontrola správného formátu místa.
             {
+                Console.Write("Invalid input. Try again.");
+                Console.ReadLine();
                 continue;
             }
 
@@ -272,18 +279,18 @@ class Program
 
             if (seatLetter - 'A' >= hall.Width || seatRow > hall.Height) // Kontrola, zda místo existuje.
             {
+                Console.Write("Invalid input. Try again.");
+                Console.ReadLine();
                 continue;
             }
 
             if (hall.ReservedSeats.Contains(seat))
             {
                 hall.ReservedSeats.Remove(seat);
-                Console.WriteLine("Reservation canceled.");
             }
             else
             {
                 hall.ReservedSeats.Add(seat);
-                Console.WriteLine("Seat reserved.");
             }
 
             break;
